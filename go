@@ -72,7 +72,7 @@ def install_cask(target_directory):
                 target_directory))
     else:
         try:
-            check_call(['git', 'clone', '-branch', 'win-exec-test', REPOSITORY, target_directory])
+            check_call(['git', 'clone', '-b', 'win-exec-test', REPOSITORY, target_directory])
         except CalledProcessError:
             raise CaskGoError('Cask could not be installed. Try again '
                               'later, or report an issue at {0}'.format(
